@@ -1,6 +1,6 @@
 {
-    "name": "horde/secret",
-    "description": "Secret key encryption library",
+    "name": "bytestream/horde-secret",
+    "description": "Horde secret key encryption library",
     "type": "library",
     "homepage": "https://www.horde.org/libraries/Horde_Secret",
     "license": "LGPL-2.1",
@@ -16,31 +16,24 @@
             "role": "lead"
         }
     ],
-    "version": "2.0.7",
-    "time": "2017-11-11",
-    "repositories": [
-        {
-            "type": "pear",
-            "url": "https://pear.horde.org"
-        }
-    ],
     "require": {
-        "php": "^5.3 || ^7",
-        "pear-pear.horde.org/Horde_Crypt_Blowfish": "^1",
-        "pear-pear.horde.org/Horde_Exception": "^2",
-        "pear-pear.horde.org/Horde_Support": "^2",
+        "php": "^7.4 || ^8.0",
+        "bytestream/horde-crypt-blowfish": "^1",
+        "bytestream/horde-exception": "^2",
+        "bytestream/horde-support": "^2",
         "ext-hash": "*"
     },
-    "suggest": {
-        "pear-pear.horde.org/Horde_Test": "^2.1"
-    },
-    "replace": {
-        "pear-pear.horde.org/Horde_Secret": "2.*",
-        "pear-horde/Horde_Secret": "2.*"
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-0": {
             "Horde_Secret": "lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "Horde_Secret": "test/"
         }
     }
 }
